@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:healthy_me/screens/home.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(
+    MyApp());
 
 class MyApp extends StatelessWidget {
   @override

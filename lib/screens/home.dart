@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'package:healthy_me/screens/senddata.dart';
 import 'package:http/http.dart' as http;
 import 'package:healthy_me/screens/post.dart';
 import 'package:healthy_me/screens/listposts.dart';
 
-Future<List<Post>> fetchPosts(http.Client client) async {
-  final response =
-      await client.get('https://jsonplaceholder.typicode.com/posts');
+Future<List<Post>> fetchPosts() async {
+  final response = await http.get(
+    'https://healthy-me.herokuapp.com/community/post',
+    headers: {
+      HttpHeaders.authorizationHeader:
+          'Token f22b0fe1a6406d3866ac5b141ea636412787651f',
+    },
+  );
 
   return compute(parsePosts, response.body);
 }
@@ -19,19 +26,32 @@ List<Post> parsePosts(String responseBody) {
   return parsed.map<Post>((json) => Post.fromJson(json)).toList();
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   final String title;
 
   HomePage({Key key, this.title}) : super(key: key);
 
   @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  Future<List<Post>> futurePost;
+
+  @override
+  void initState() {
+    super.initState();
+    futurePost = fetchPosts();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(widget.title),
       ),
       body: FutureBuilder<List<Post>>(
-        future: fetchPosts(http.Client()),
+        future: futurePost,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Column(
@@ -100,7 +120,13 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(18.0),
         child: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: (){},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => SendData(),
+              ),
+            );
+          },
         ),
       ),
     );
