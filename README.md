@@ -3,9 +3,16 @@
 ## DSC KR Solution Challenge 해커톤 🚩  
 
 ---
+![1](https://github.com/Healthy-Me/healthy_me_frontend/assets/59801728/ac156eef-3dbd-492d-bc5d-3094345c48f0)
 
-![1](https://github.com/Capstone-cogrow/cogrow/assets/91127380/cc643b4a-bae6-41ac-ade3-9c3a93246f92)
-![2](https://github.com/Capstone-cogrow/cogrow/assets/91127380/ad9b83b9-b79e-40a5-a445-39e41eaa2c54)
+
+![2](https://github.com/Healthy-Me/healthy_me_frontend/assets/59801728/e57a9a47-ff05-4558-92a8-6b02e5a975f2)
+
+
+![3](https://github.com/Healthy-Me/healthy_me_frontend/assets/59801728/aef43540-f213-4828-aa8b-e302352b0089)
+
+
+![4](https://github.com/Healthy-Me/healthy_me_frontend/assets/59801728/f1c184ff-d908-43d7-bc8b-4c5974cf1f35)
 
 ## 🎺 수상 🎺
 ![image](https://user-images.githubusercontent.com/64149514/107139297-7e7e1800-695d-11eb-9b21-631501207176.png)
