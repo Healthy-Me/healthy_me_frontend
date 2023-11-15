@@ -3,6 +3,8 @@
 ## DSC KR Solution Challenge 해커톤 🚩  
 
 ---
+![1](https://github.com/Capstone-cogrow/cogrow/assets/91127380/cc643b4a-bae6-41ac-ade3-9c3a93246f92)
+![2](https://github.com/Capstone-cogrow/cogrow/assets/91127380/ad9b83b9-b79e-40a5-a445-39e41eaa2c54)
 
 ## 🎺 수상 🎺
 ![image](https://user-images.githubusercontent.com/64149514/107139297-7e7e1800-695d-11eb-9b21-631501207176.png)
